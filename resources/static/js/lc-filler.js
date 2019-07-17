@@ -1,4 +1,4 @@
-/* 
+/*
  * Licensed under the MIT public license.
  *
  * Part of LdapCherry.
@@ -10,7 +10,7 @@
 function lcUid(firstname, lastname){
     var ascii_firstname = removeDiacritics(firstname).toLowerCase().replace(/[^a-z]/g, '');
     var ascii_lastname = removeDiacritics(lastname).toLowerCase().replace(/[^a-z]/g, '');
-    return ascii_firstname.charAt(0)+ascii_lastname.substring(0,7);
+    return ascii_firstname.charAt(0)+ascii_lastname.substring(0,19);
 }
 
 function lcDisplayName(firstname, lastname){

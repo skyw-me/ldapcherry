@@ -226,6 +226,7 @@ class Backend(ldapcherry.backend.backendLdap.Backend):
         attrs['userPrincipalName'] = '%(name)s@%(domain)s' % {
             'name': attrs['sAMAccountName'], 'domain': self.domain
         }
+        attrs['displayName'] = attrs['cn']
         super(Backend, self).add_user(attrs)
 
         ldap_client = self._bind()
